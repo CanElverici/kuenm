@@ -193,7 +193,7 @@ kuenm_mod <- function(occ.joint, M.var.dir, out.eval, batch, rep.n = 10, rep.typ
   out.dir <- gsub("/", dl, paste(getwd(), out.dir, sep = sl))
 
   #Defining maximum ram to be used (50% of free memory)
-  ram <- paste("-mx", max.memory, "m", sep = "")
+  ram <- paste("-Djava.awt.headless=true -mx", max.memory, "m", sep = "")
 
   #####
   #Maxent settings
